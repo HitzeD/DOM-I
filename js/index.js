@@ -48,7 +48,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 const aTags = document.querySelectorAll("nav a");
 const nav = document.querySelector("nav");
 const a = document.createElement("a");
-const a2 = document.createElement("a")
+const a2 = document.createElement("a");
+const headDiv = document.querySelector(".cta-text");
 
 let headImg = document.querySelector("#cta-img");
 const titl = document.querySelector("h1");
@@ -90,8 +91,6 @@ aTags.forEach(function(element){
 });
 
 
-console.log(nav);
-
 // header IMG
 
 headImg.setAttribute('src' , siteContent["cta"]["img-src"]);
@@ -101,23 +100,30 @@ headImg.setAttribute('src' , siteContent["cta"]["img-src"]);
 titl.innerHTML = siteContent["cta"]["h1"];
 btn.innerHTML = siteContent["cta"]["button"];
 
-// MID SECTION  --------------------------------
+// MID SECTION  --------------------------------------------------------
 
 topCont[0].querySelector("h4").innerHTML = siteContent["main-content"]["features-h4"];
 topCont[0].querySelector("p").innerHTML = siteContent["main-content"]["features-content"];
+topCont[0].style.textAlign = 'center';
 
+topCont[1].style.textAlign = 'center';
 topCont[1].querySelector("h4").innerHTML = siteContent["main-content"]["about-h4"];
 topCont[1].querySelector("p").innerHTML = siteContent["main-content"]["about-content"];
 
-// Mid Image
+// Mid Image ------------
 
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
-// bottom content
+// bottom content ------------
 
 botitl[0].innerHTML = siteContent["main-content"]["services-h4"];
+botitl[0].style.textAlign = 'center';
+
 botitl[1].innerHTML = siteContent["main-content"]["product-h4"];
+botitl[1].style.textAlign = 'center';
+
 botitl[2].innerHTML = siteContent["main-content"]["vision-h4"];
+botitl[2].style.textAlign = 'center';
 
 bopara[0].innerHTML = siteContent["main-content"]["services-content"];
 bopara[1].innerHTML = siteContent["main-content"]["product-content"];
