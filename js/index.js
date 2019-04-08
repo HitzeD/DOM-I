@@ -93,3 +93,12 @@ bopara[2].innerHTML = siteContent["main-content"]["vision-content"];
 
 // Contact Section
 
+const contact = document.querySelector(".contact h4");
+const contactPara = document.querySelectorAll(".contact p");
+contact.innerHTML = siteContent["contact"]["contact-h4"];
+contactPara[0].innerHTML = siteContent["contact"]["address"];
+contactPara[1].innerHTML = siteContent["contact"]["phone"];
+contactPara[2].innerHTML = siteContent["contact"]["email"];
+
+const foot = document.querySelector("footer p");
+foot.innerHTML = siteContent["footer"]["copyright"];
