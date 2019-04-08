@@ -43,8 +43,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 // Self additions -----------------------------------------------
 
-// nav bar
+// variables
+
 const aTags = document.querySelectorAll("nav a");
+let headImg = document.querySelector("#cta-img");
+const titl = document.querySelector("h1");
+const btn = document.querySelector("button");
+const topCont = document.querySelectorAll(".top-content div");
+const midImg = document.querySelector("#middle-img");
+const botitl = document.querySelectorAll(".bottom-content .text-content h4");
+const bopara = document.querySelectorAll(".bottom-content .text-content p");
+const contact = document.querySelector(".contact h4");
+const contactPara = document.querySelectorAll(".contact p");
+const foot = document.querySelector("footer p");
+
+// NAV BAR ----------------------------------------
+
 aTags[0].innerHTML = siteContent["nav"]['nav-item-1'];
 aTags[1].innerHTML = siteContent["nav"]['nav-item-2'];
 aTags[2].innerHTML = siteContent["nav"]['nav-item-3'];
@@ -52,22 +66,22 @@ aTags[3].innerHTML = siteContent["nav"]['nav-item-4'];
 aTags[4].innerHTML = siteContent["nav"]['nav-item-5'];
 aTags[5].innerHTML = siteContent["nav"]['nav-item-6'];
 
+aTags.forEach(function(element){
+  element.style.color = 'green';
+});
+
 
 // header IMG
 
-let headImg = document.querySelector("#cta-img");
 headImg.setAttribute('src' , siteContent["cta"]["img-src"]);
 
-// CTA
+// CTA -----------------------------------------------------
 
-const titl = document.querySelector("h1");
-const btn = document.querySelector("button");
 titl.innerHTML = siteContent["cta"]["h1"];
 btn.innerHTML = siteContent["cta"]["button"];
 
 // MID SECTION  --------------------------------
 
-const topCont = document.querySelectorAll(".top-content div");
 topCont[0].querySelector("h4").innerHTML = siteContent["main-content"]["features-h4"];
 topCont[0].querySelector("p").innerHTML = siteContent["main-content"]["features-content"];
 
@@ -76,13 +90,10 @@ topCont[1].querySelector("p").innerHTML = siteContent["main-content"]["about-con
 
 // Mid Image
 
-const midImg = document.querySelector("#middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
 // bottom content
 
-const botitl = document.querySelectorAll(".bottom-content .text-content h4");
-const bopara = document.querySelectorAll(".bottom-content .text-content p");
 botitl[0].innerHTML = siteContent["main-content"]["services-h4"];
 botitl[1].innerHTML = siteContent["main-content"]["product-h4"];
 botitl[2].innerHTML = siteContent["main-content"]["vision-h4"];
@@ -91,14 +102,14 @@ bopara[0].innerHTML = siteContent["main-content"]["services-content"];
 bopara[1].innerHTML = siteContent["main-content"]["product-content"];
 bopara[2].innerHTML = siteContent["main-content"]["vision-content"];
 
-// Contact Section
+// Contact Section ------------------------------------------------
 
-const contact = document.querySelector(".contact h4");
-const contactPara = document.querySelectorAll(".contact p");
 contact.innerHTML = siteContent["contact"]["contact-h4"];
 contactPara[0].innerHTML = siteContent["contact"]["address"];
 contactPara[1].innerHTML = siteContent["contact"]["phone"];
 contactPara[2].innerHTML = siteContent["contact"]["email"];
 
-const foot = document.querySelector("footer p");
+
+// FOOTER -------------------------------------------
+
 foot.innerHTML = siteContent["footer"]["copyright"];
