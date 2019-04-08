@@ -46,9 +46,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // variables
 
 const aTags = document.querySelectorAll("nav a");
+const nav = document.querySelector("nav");
+const a = document.createElement("a");
+const a2 = document.createElement("a")
+
 let headImg = document.querySelector("#cta-img");
 const titl = document.querySelector("h1");
 const btn = document.querySelector("button");
+
 const topCont = document.querySelectorAll(".top-content div");
 const midImg = document.querySelector("#middle-img");
 const botitl = document.querySelectorAll(".bottom-content .text-content h4");
@@ -66,10 +71,26 @@ aTags[3].innerHTML = siteContent["nav"]['nav-item-4'];
 aTags[4].innerHTML = siteContent["nav"]['nav-item-5'];
 aTags[5].innerHTML = siteContent["nav"]['nav-item-6'];
 
+// aTags.forEach(function(element,siteContent){
+//   element.innerHTML = siteContent["nav"];
+// });
+
+nav.prepend(a2);
+a2.setAttribute('href', '#');
+a2.innerHTML = 'Do You..';
+a2.style.color = 'green';
+
+nav.appendChild(a);
+a.setAttribute('href', '#');
+a.innerHTML = 'More?';
+a.style.color = 'green';
+
 aTags.forEach(function(element){
   element.style.color = 'green';
 });
 
+
+console.log(nav);
 
 // header IMG
 
